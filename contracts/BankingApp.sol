@@ -11,10 +11,6 @@ contract BankingApp {
 		balances[tx.origin] = 20000;
 	}
 
-	function createAccount(uint) public view returns(address) {
-		
-	}
-
 	function withdraw(address add, uint amount) public returns(bool sufficient) {
 		if (balances[add] < amount) return false;
 		balances[add] -= amount;
